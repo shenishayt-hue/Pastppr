@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PastPaper Hub - Search & Download Past Papers</title>
+  <meta name="description" content="Search and download Sri Lankan past papers, term test papers and O/L, A/L papers for free.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="brand">📚 PastPaper<span>Hub</span></div>
+      <h1>Find any past paper in seconds</h1>
+      <p>Term tests, O/L and A/L papers — search and download as PDF.</p>
+      <form id="searchForm" class="search">
+        <input id="q" type="search" placeholder="e.g. grade 11 ict 2nd term" autocomplete="off" required>
+        <button type="submit">Search</button>
+      </form>
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-source="wiki">Term Test Papers</button>
+        <button class="tab" data-source="lk">O/L &amp; A/L Papers</button>
+      </div>
+      <div class="chips" id="popular"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="status" class="status"></div>
+    <div id="results" class="grid"></div>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <img id="mThumb" alt="">
+      <h3 id="mTitle"></h3>
+      <p id="mDesc" class="muted"></p>
+      <div id="mLinks" class="links"></div>
+    </div>
+  </div>
+
+  <footer>Papers are provided by third-party sources. All rights belong to their owners.</footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>
