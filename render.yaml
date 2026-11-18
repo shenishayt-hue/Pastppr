@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: pastpaper-hub
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: SUPUN_BASE_URL
+        value: https://supunofc.site
+      - key: SUPUN_API_KEY
+        sync: false
+      - key: MONGODB_URI
+        sync: false
